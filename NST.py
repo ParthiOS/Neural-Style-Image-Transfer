@@ -23,7 +23,7 @@ img_size = 800
 
 # PLEASE NOTE: the file in weights= section is actually just a file downloaded us# theing imageNet's pre existing data base,
 # The initial code to download this file was temp_file = tf.keras.applications.VGG19(include_top=False, weights='imagenet')
-# then model.save_weights('vgg19_weights.h5') was called to save the file to the working dir
+# then model.save_weights('vgg19_weights.h5') was called to save the file to the working dir, this code was removed to stop redownloading every time the program was tested
 temp_file = tf.keras.applications.VGG19(include_top=False, weights='imagenet')
 vgg = tf.keras.applications.VGG19(include_top=False,
                                 input_shape=(img_size, img_size, 3),
